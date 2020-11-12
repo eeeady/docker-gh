@@ -41,6 +41,12 @@ RUN set -ex && cd ~ \
     && aws --version \
     && rm -r awscliv2.zip awscliv2.sig aws
 
+ARG GH_CLI_VERSION=""
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
+    && apt-add-repository https://cli.github.com/packages \
+    && apt update \
+    && apt install gh
+
 # apt-get all the things
 # Notes:
 # - Add all apt sources first
