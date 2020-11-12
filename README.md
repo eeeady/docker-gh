@@ -1,18 +1,11 @@
-# docker-template
-
-[![CircleCI](https://circleci.com/gh/trussworks/docker-template/tree/master.svg?style=svg)](https://circleci.com/gh/trussworks/docker-template/tree/master)
-
-This repository is meant to serve as both an example and a template for new docker images with our general format.
+# docker-gh
 
 This particular example creates a docker image built off of CircleCI's most basic convenience image [`cimg/base`](https://hub.docker.com/r/cimg/base) with the following tools installed on top:
 
 - AWS CLI
 - CircleCI CLI
 - ShellCheck
-
-## Note about downstream images
-
-In the source code for docker images like [circleci-docker-primary](https://github.com/trussworks/circleci-docker-primary), the code for downstream images are also contained in the same repository. We've decided to not pursue this route for the images replacing `circleci-docker-primary`. While this does mean we have to manage and track more repositories, it also means we don't have to worry about the complexity of figuring out which image needs to be built and released whenever a commit is made.
+- Github CLI
 
 ## Developer Setup
 
