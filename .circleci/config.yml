@@ -23,10 +23,10 @@ jobs:
           name: Release container
           command: make release
 workflows:
-    version: 2
-    builds:
+  validate:
     jobs:
-      - build:
-            context:
-            - org-global
+    - build:
+        context:
+        - org-global
+  version: 2.1
 
